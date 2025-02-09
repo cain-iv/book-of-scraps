@@ -7,8 +7,8 @@
         <script>
             window.location.replace("#home");
         </script>
-        
-        <title> > Hướng dẫn sử dụng < </title>
+<script src="https://chattable.neocities.org/scripts/main.min.js"></script>
+        <title>&gt; Hướng dẫn sử dụng &lt;</title>
         <link
             rel="icon"
             type="image/x-icon"
@@ -23,13 +23,12 @@
         <link rel="stylesheet" href="https://unpkg.com/98.css" />
         <style>
             @font-face {
-  font-family: yah;
-  src: url(https://unpkg.com/98.css@0.1.16/dist/ms_sans_serif.woff) format("woff");
-  src: url(https://unpkg.com/98.css@0.1.16/dist/ms_sans_serif.woff2) format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
+                font-family: yah;
+                src: url(https://unpkg.com/98.css@0.1.16/dist/ms_sans_serif.woff)
+                    format("woff");
+                font-weight: 400;
+                font-style: normal;
+            }
 
             a:hover {
                 cursor: help;
@@ -39,10 +38,10 @@
                 grid-template-columns: 20px auto;
                 position: absolute;
                 bottom: 0;
-                margin-left: 42%;
-                margin-bottom: 10px;
+                margin-left: 0%;
                 align-items: center;
-                width: 160px;
+                width: 175px;
+                height: 35px;
                 font-size: 11px;
                 color: #ff77ad;
                 line-height: 140%;
@@ -63,14 +62,15 @@
                 overflow: hidden;
                 white-space: nowrap;
                 display: inline-block;
-                width: calc(100% - 10px - 1px);
-                margin-left: calc(5px);
+                width: calc(max-content + 5px);
+                margin-left: 15px;
+                
             }
 
             #musicpixel {
-                width: 120%;
+                width: 30px;
+                height: 30px;
                 padding-top: 0px;
-
                 box-shadow:
                     inset -1px -1px #0a0a0a,
                     inset 1px 1px #fff,
@@ -117,9 +117,10 @@
             .marquee {
                 display: inline-block;
                 padding-left: 100%;
-                animation: marquee 5s linear infinite;
-                font-family: arial;
+                animation: marquee 4s linear infinite;
+                font-family: Pixelated MS Sans Serif;
                 color: #222;
+                
             }
 
             @keyframes marquee {
@@ -142,18 +143,19 @@
                 background-color: #55aaaa;
             }
 
+            button {
+                min-width: 20px !important;
+                padding: 0px;
+            }
             .deadbox {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 position: relative;
                 border: none;
-                height: 100px;
                 top: 0;
                 padding: 5px;
                 background-color: #fff;
-                box-sizing: border-box;
-                padding: 3px 4px;
                 overflow-y: scroll;
                 border-radius: 0;
                 box-shadow:
@@ -161,6 +163,18 @@
                     inset 1px 1px grey,
                     inset -2px -2px #dfdfdf,
                     inset 2px 2px #0a0a0a;
+                width: 340px !important;
+                height: 296px !important;
+             
+            }
+            .custom-alert {
+                position: absolute;
+                z-index: 20000;
+                background:silver;
+                box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+                padding:5px;
+                font-family: Pixelated MS Sans Serif;
+                
             }
             .deadbox:target {
                 display: block;
@@ -182,15 +196,15 @@
                 font-weight: 700;
             }
             mark1 {
-                font-weight: 700;
+                font-weight: 600;
             }
 
             button:hover {
                 cursor: help;
             }
 
-            .text-body  {
-               margin: 10px;
+            .text-body {
+                margin: 10px;
                 position: relative;
                 background: #fff;
                 border-radius: 0;
@@ -201,13 +215,30 @@
                     inset 2px 2px #0a0a0a;
                 padding: 5px;
             }
+            hr.solid {
+                border-top: 1px solid #000;
+                width: 100%;
+                float: left;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                line-height: 15px;
+                width: 100%;
+            }
+            .vl {
+  border-left: 1px solid black;
+  height: 100%;
+}
         </style>
     </head>
 
     <body>
-        <div class="window" style="width: 300px; position: relative">
+        <div class="window" style="width: 500px; position: relative">
             <div class="title-bar">
-                <div class="title-bar-text">You have so much to discover still</div>
+                <div id="message" class="title-bar-text">Vỏ cá màu bạc trong lòng đất</div>
                 <div class="title-bar-controls">
                     <button aria-label="Minimize"></button>
                     <button aria-label="Maximize"></button>
@@ -215,583 +246,350 @@
                 </div>
             </div>
             <div
-                class="window-body"
-                style="width: 30%; float: left; font-size: 15px"
+                style="
+                    height: max-content;
+                    background-color: #fff;
+                    padding: 3px 4px;
+                    border-radius: 0;
+                    box-shadow:
+                        inset -1px -1px #fff,
+                        inset 1px 1px grey,
+                        inset -2px -2px #dfdfdf,
+                        inset 2px 2px #0a0a0a;
+                "
             >
-                 <img
-                    src="https://pixels.crd.co/assets/images/gallery116/2eb51134.gif?v=87a16b78"
-                />
-                <mark1 style="margin-bottom: 7px;">NEWT </mark1>
-               
+                <button
+                    style="min-width: 5px !important; padding: 3px"
+                    onclick="location='#home'"
+                >
+                    🏠︎
+                </button>
+                https://stellular.org/iv-archive
+                <button
+                    style="float: right; width: 3px"
+                    onclick="window.location='https://stellular.org/api/v1/project/iv-archive/files/login-window.html'"
+                >
+                    log out
+                </button>
+            </div>
+            <div
+                class="window-body"
+                style="width: 25%; float: left; font-size: 15px; margin-bottom: 0px"
+            >
                 <img
-                    style="box-shadow:
-                    inset -1px -1px #fff,
-                    inset 1px 1px grey,
-                    inset -2px -2px #dfdfdf,
-                    inset 2px 2px #0a0a0a; border-radius: 0; padding: 2px; width: 100px; margin-top: 5px; margin-bottom: 5px;"
+                    style="
+                        box-shadow:
+                            inset -1px -1px #fff,
+                            inset 1px 1px grey,
+                            inset -2px -2px #dfdfdf,
+                            inset 2px 2px #0a0a0a;
+                        border-radius: 0;
+                        padding: 2px;
+                        width: 100px;
+                        margin-bottom: 5px;
+                    "
                     src="https://i.pinimg.com/564x/f9/90/65/f9906593b9da5108ceb4615d0809b287.jpg"
                 />
-                <nav>
-                    <select style="width:105px;" onchange="location = this.value;">
+                <br />
+
+                <mark1 style="margin-bottom: 7px">Newton Yve-Carter</mark1>
+                <br />
+                @iv.love.nyc
+                <br />
+                <i style="font-size: 12px; color: green">
+                    'i don't believe in my existence... still dont.'
+                </i>
+                <hr class="solid" style="width: 80%" />
+                <p style="font-size: 12px; margin: 0px">
+                    <b>Trạng thái:</b>
+                    <br />
+                    <img
+                        src="https://pixels.crd.co/assets/images/gallery116/2eb51134.gif?v=87a16b78"
+                    />
+                    wuh luh wuh
+                </p>
+
+                <hr class="solid" style="width: 80%" />
+                <br />
+                <b style="font-size: 12px">Đi đến:</b>
+                <nav style="margin-bottom: 20px;">
+                    <select
+                        style="width: 105px; position: relative; z-index: 1000"
+                        onchange="location = this.value;"
+                    >
                         <option value="#home">1 - home</option>
-                        <option value="#two">2 - about me</option>
-                        <option value="#three">3 - media</option>
-                        <option value="#four">4 - secret</option>
-                        <option value="#five">5 - faq</option>
+                        <option value="#two">2 - my interests </option>
+                        <option value="#three">3 - web projects</option>
+                        <option value="#four">4 - chats </option>
                     </select>
                 </nav>
             </div>
             <div
                 class="window-body"
-                style="width: 55%; float: right; position: relative"
+                style="position: relative;"
             >
-                <div
-                    class="deadbox"
-                    id="home"
-                    style="
-                        position: absolute;
-                        width: 160px;
-                        height: 130px;
-                        overflow-y: scroll;
-                    "
-                >
-                    <img style="width: 100%;" src="https://f2.toyhou.se/file/f2-toyhou-se/images/49105933_NhJmW8wyXQwtDAK.gif"/>
-                    <mark2>@ what is this</mark2>
-                    <br />
-                    Hello, you've come to the right place. All that should be known
-                    about me is on here. there is music, if you're interested! Click
-                    the little bug to listen to the song, and again to stop. If not,
-                    let's just skip to the chase and click the drop-down menu for
-                    more info on me!!! <br/>
-                    <img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/68323908_wLR.gif"/>
-                </div>
-            </div>
+                
+                <div class="deadbox" id="home" spellcheck="false" contenteditable="true" style="position: relative">
+                
 
-            <div
-                class="window-body"
-                style="width: 55%; float: right; position: relative"
-            >
-                <div
-                    class="deadbox"
-                    id="three"
-                    style="
-                        position: absolute;
-                        width: 160px;
-                        height: 130px;
-                        overflow-y: scroll;
-                        margin-top: -16px;
-                    "
-                >
-                    Check these out :3 Also I don't talk about things I like after a
-                    while bc I have 0 object permanence. Click the "X" button to
-                    close small tabs.
+                    <img
+                        style="width: 30%"
+                        src="https://web.archive.org/web/20091027083517im_/http://hk.geocities.com/hello300hk300/cute_036.gif"
+                    />
+                    <img
+                        style="width: 15%"
+                        src="https://y2k.neocities.org/stamps/tumblr_inline_pe6lntIIZX1v11djx_1280.gif"
+                    />
+                    <i style="color: brown">
+                        <br />
+                        ✳ Để xem về các phần khác, mọi người sử dụng dropbox bên mục
+                        "Đi đến" bên tay trái nhé!
+                    </i>
+                    <br />
+                    <hr class="solid" />
+                    <br />
+                    <br />
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <mark2>@Lần cuối cập nhật:</mark2>
+                                    27/12/2024
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    Các cập nhật nhỏ không quan trọng mình sẽ không bổ sung chính
+                    thức vào mục này.
+
+                    <br />
+                    <hr class="solid" />
+                    <br />
+                    <br />
+                    <mark2>@Tiểu sử</mark2>
+                    <br />
+                    ✳ Xin chào, mình là NYC (không phải ny cũ lẫn new york city),
+                    nhưng mà bình thường friendlist sẽ gọi mình là Ánh/Asnk/Tea. Mọi
+                    người chọn cái nào để gọi cũng được trừ 'nyc'.
+                    <br />
+                    ✳ Mình sử dụng song song tiếng Anh và tiếng Việt trên profile
+                    của mình, nhưng mà tiếng Anh thường sẽ nhiều hơn.
+                    <br />
+                    ✳ Đối với tiếng nào đi nữa thì mình vẫn sử dụng đại từ danh xưng
+                    nam và trung tính (he/they), các từ khác như anh chị cô chú gì
+                    cũng mong mọi người xử dụng nam hoặc trung tính nhé.
+                    <br />
+                    ✳ transmasc, unlabelled sexuality
+                    <br />
+                    <img
+                        src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/68323908_wLR.gif"
+                    />
+                    <br />
+                    <hr class="solid" />
+                     <mark2>@Tường nhà bao gồm </mark2> <br />
+                     ⊹ MÌNH CỰC KÌIIII WOKE <br/>
+                    ⊹ Nhiều spam về joke và meme
+                        <br />
+                         ⊹ Đăng nhiều về các chủ đề ngẫu nhiên khó nói trước, đời sống và sức khỏe tinh thần cá nhân
+                        <br />
+                         ⊹ Có <u>NSFW</u> nhưng thường sẽ không explicit/có warning
+                        <br />
+                       ⊹ Keyboard smash đúng nghĩa đen
+                        <br />
                     <br/>
-                    <a onclick="yourFunction2()">
-                        <img
-                            src="https://pixels.crd.co/assets/images/gallery40/313d59c5.gif?v=87a16b78"
-                        />
-                        <mark2 style="color: #222">!General media</mark2>
-                    </a>
+                     <mark2>@Người không hạp với mình </mark2> <br />
+                       ⊹ Mình không add các bạn đăng nhiều về genshin impact/hsr/wuwa, rap viet, joke vùng miền và njsj en vtubers
+   <br />  ⊹ Không add các tài khoản rant (nhắc nhiều về suicidal thoughts, ý kiến chính trị dạng hot takes, gore posting...)
+                    Các bạn có đăng nhưng chia vào riêng các album hoặc/và exclude mình ra thì vẫn oke với mình nha.
+                 <br/>   ⊹  Ko add người không biết, không quan tâm gì tới tình hình ở Pal3st1n3 hiện tại (đặc biệt bênh vực các celeb/influence hoặc outright ủng hộ isnotr3al)
                     <br />
-
-                    <a onclick="yourFunction()">
-                        <img
-                            src="https://pixels.crd.co/assets/images/gallery106/ecca9a8d.gif?v=87a16b78"
-                        />
-
-                        <mark2 style="color: #222">!Games</mark2>
-                    </a>
-
-                    <a onclick="yourFunction3()">
-                        <img
-                            src="https://pixels.crd.co/assets/images/gallery48/28606c9c.gif?v=87a16b78"
-                        />
-
-                        <mark2 style="color: #222">!Music</mark2>
-                    </a>
+                    <p style="color: blue">
+                        Để biết thêm về cái mình thích và ghét thì mọi người đến mục
+                        <a href=""> interests </a> nhé
+                    </p>
+                    <hr class="solid" />
+                    <br />
+                    <br />
+                    <mark2>@FAQs:</mark2>
+                    <br />
+                    <i style="color: brown;">?Bạn có còn nhận comm không</i>
+                    <br /><br/>
+                    - Mình hiện không còn nhận comm nữa, và khả năng cao là sẽ không
+                    nhận comm trong thời gian sắp tới. Mình là sinh viên và đang có
+                    việc làm thêm nữa. Mình không muốn nhận comm mà không có khả năng
+                    hoàn thành tốt, mong bạn thông cảm!
+                    <br />
+                    <br />
+                    <i style="color: brown;">?Bạn vẽ bằng phần mềm gì/Bạn sử dụng cọ gì?</i>
+                    <br/>
+                  <p style="padding-bottom: 40px;">  Mình sử dụng Clip Studio Paint Pro là chính, lâu lâu có vẽ bằng
+                    Ibis Paint trên điện thoại. Set cọ cụ thể thì bị xóa khỏi store
+                    rồi huhu, nhưng mà miễn là cọ đầu dẹp và blend màu tốt thì mình
+                    sử dụng ok cả! </p>
+                    <div contenteditable="false" style="position: sticky;
+      bottom: 0; 
+      left: 0;
+                    
+                            
+      width: 97%; padding: 3px;
+      height: 22px; background-color: #c0c0c0;" > 
+                        <button  title="No editing permission" disabled="true"><b>B</b> </button>
+                        <button  title="No editing permission" disabled="true"><i>i</i></button>
+                        <button  title="No editing permission" disabled="true"><u>u</u></button>
+                     <button onclick=
+            "showAlert('You do not have permission to edit this text.', 'If this is indeed your account, please contact us.')" style="float:right; padding: 2px;"> Save changes</button>
+                    </div>
                 </div>
+                
             </div>
+
+           
+               
+           
 
             <div
                 class="window-body"
-                style="width: 55%; float: right; position: relative"
+                style="position: relative"
             >
                 <div
                     class="deadbox"
                     id="two"
-                    style="
-                        position: absolute;
-                        margin-top: -32px;
-                        width: 160px;
-                        height: 130px;
-                        overflow-y: scroll;
-                    "
+                   style="position: relative"
                 >
-                    Click on something fun!!^_^ Click the "X" button to close small
-                    tabs.
-                    <br />
+                <mark2>@Fandoms</mark2> <img src="https://pixels.crd.co/assets/images/gallery10/09c31c53.gif?v=99d3974e"/>
+<br/>―― Đang thích tập trung Arcane, The Magnus archives, Dungeon meshi, Dungeon and daddies
+<br/>―― Các fd mình ko active nhưng vẫn quan tâm: Adventure time, Witch Hat Atelier, Haikyuu!!, Gravity falls
+  <hr class="solid" />
+                  
+  <br/> <mark2>@Ships</mark2> <img src="https://pixels.crd.co/assets/images/gallery56/8f60b6ba.gif?v=99d3974e"/>
+  <br/>―― Jayce Talis x Viktor (Arcane), Kenny McCormick x Stan Marsh (South Park), Kuroo Tetsurou x Kenma Kozume (Haikyuu!), Phoenix Wright x Miles Edgeworth, Herlock Sholmes x Yujin Mikotoba (AA/TGAA)
+<hr class="solid" />
+                     <br/> <mark2>@Kins/Fav</mark2>
+                      <br/>―― Mithrun (Dungeon Meshi), Glenn Close (Dungeons and Dragons), Reagan Ridley (Inside Job), Princess Bubblegum (Adventure Time), Ame-chan (NEEDY STREAMER OVERLOAD), Viktor (Arcane)
 
-                    <a onclick="myFunction2()">
-                        <img
-                            src="https://pixels.crd.co/assets/images/gallery72/345c8fe5.gif?v=87a16b78"
-                        />
-                        <mark2 style="color: #222">!About me</mark2>
-                    </a>
-                    <br />
-
-                    <a onclick="myFunction()">
-                        <img
-                            src="https://pixels.crd.co/assets/images/gallery64/d6806eb2.gif?v=87a16b78"
-                        />
-                        <mark2 style="color: #222">!BYF</mark2>
-                    </a>
+                 <p style="color: blue"><b>To be updated...</b></p>
                 </div>
             </div>
 
-            <div style="width: 55%; float: right; position: relative">
-                <div
-                    class="notdeadbox"
-                    id="four"
-                    style="
-                        position: absolute;
-                        width: 160px;
-                        height: 130px;
-                        overflow: hidden;
-                        margin-top: -40px;
-                        margin-left: -8px;
-                    "
-                >
-                    Wow you saw secret and you'd still click huh? &gt;:[ It's okay,
-                    no actual secret is here. But there is a lot of info you
-                    normally wouldn't care about.
-                     <br />
-                    <br />
-                    <div
-                        style="
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                        
-                        "
-                    >
-                        <button style="height: 50px;" onclick="guestbookmeow()">
-                            <img
-                               
-                                src="https://pixels.crd.co/assets/images/gallery15/e8b3f1aa.gif?v=2942f085"
-                            /> <br/>
-                            <mark2 style="color: #222">Guest Book</mark2>
-                        </button>
-                        <br />
-
-                        <button style="height: 50px;" onclick="OCmeow()">
-                            <img
-                                src="https://pixels.crd.co/assets/images/gallery64/d6806eb2.gif?v=87a16b78"
-                            />
-                            <mark2 style="color: #222"> Gallery </mark2>
-                        </button>
-                    </div>
-                </div>
-            </div>
-<div
-                class="window-body"
-                style="width: 55%; float: right; position: relative"
-            >
-                <div
+            <div
                     class="deadbox"
-                    id="five"
-                    style="
-                        position: absolute;
-                        width: 160px;
-                        height: 130px;
-                        overflow-y: scroll;
-                        margin-top: -48px;
-                    "
-                >
-This is where I would store my FAQs !! IF I HAD ANY >:[
-                    
-                </div>
-      </div>
-
-
-            <div id="musicplayer">
+                    id="three"
+                  
+                > Empty vacuum for my future failures...<img src="https://pixels.crd.co/assets/images/gallery29/b8b5b6f3.gif?v=99d3974e"/> </div>
+           <div class="deadbox" id="four" style="overflow: hidden;">
+              <iframe style="height:300px;" src="https://www5.cbox.ws/box/?boxid=950751&boxtag=XAPIfp" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+           </div>
+            <div id="footer" style="float: left; width: 100%; position: relative; margin-top: -10px;">
+                <button disabled="true" style="padding: 1px; width: 100%; display: flex; flex-direction: row; color: black;">
+<div style="width: 25%;"> This blurb blog <br/> belongs to: </div>
+                    <div style="width: 40%; height: 100%; background-repeat: none; background-image: url('https://web.archive.org/web/20090730174718/http://hk.geocities.com/ccscardcaptorsakura/MOVIC/4.gif');
+    background-size: 100% auto; background-position: center;"> <p style="color: red; padding: 0;"> @iv.love.nyc </p> </div>
+                
+                    <div style="width: 35%;"> 
+                <div id="musicplayer">
                 <div id="musicpixel">
-                    <img
+                    <img style="width:95%; "
                         src="https://pixels.crd.co/assets/images/gallery58/440d8998.gif?v=87a16b78"
                     />
                     <div class="overlay">
-                        <img
+                        <img 
                             src="https://pixels.crd.co/assets/images/gallery58/d53ee4e1.gif?v=87a16b78"
                         />
                         <div class="playpause"><i class="fas fa-play"></i></div>
                     </div>
                 </div>
                 <div id="musictitle">
-                    <span class="marquee" style="font-family: Pixelated MS Sans Serif;">ozowa - nuvfr</span>
+                    <span class="marquee" style="font-family: Pixelated MS Sans Serif;"> <- Click here for a song </span>
                 </div>
             </div>
-        </div>
-        <audio
+                        <audio
             id="musicsrc"
             loop=""
             src="https://files.catbox.moe/33ugvg.mp3"
         ></audio>
-        <div
-            class="window"
-            style="
-                width: 200px;
-                height: 150px;
+                </div>    
+                </button>
+            </div>
 
-                margin-left: 250px;
-                margin-top: 250px;
-                display: none;
-                position: absolute;
-                z-index: 10;
-            "
-            id="BYF"
-        >
-            <div class="title-bar">
-                <div class="title-bar-text">BYF</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close" onclick="myFunction()"></button>
-                </div>
-            </div>
-            <div class="text-body" style="margin: 11px; height: 70%; overflow-y: scroll">
-                <img src="https://pixels.crd.co/assets/images/gallery10/be491fff.gif?v=87a16b78"/>
-                <p>
-                   <mark2> ★ My content <br/> </mark2>
-- bit spammy with shares/rt/reblogs <br/>
-- posts about the most mundane things <br/>
-- make poor attempts at humour <br/>
-- also make very long rants about any subject EVER <br/>
-- family + mental health rants (i do make sure you can usually exclude these) <br/>
-- incoherent FB status spams <br/>
-<br/>
-<mark2> ★ What I avoid <br/> </mark2>
-- mihoyo games (esp genshin) <br/>
-- EN vtubers <br/>
-- Rap Viet <br/>
-- purely rant accounts <br/>
-- purely work accounts <br/>
-*Exclusions only for acquaintances <br/>
-<br/>
-                    <mark2> ★If you don't like me so much (even after becoming moots)<br/> </mark2>
-Feel free to mute /unfriend/ unfollow/block me!! I'll not take any of it personally. I also expect the same thing from you btw!<br/>
-Disagreements are unavoidable, and don't feel bad if we aren't always on the same side of things. <br/>
-                </p>
-            </div>
-        </div>
-        <div
-            class="window"
-            style="
-                width: 200px;
-            height: 300px;
            
-                margin-left: -300px;
-                margin-top: -200px;
-                display: none;
-                position: absolute;
-                z-index: 10;
-            "
-            id="intro"
-        >
-            <div class="title-bar">
-                <div class="title-bar-text">Introduction</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close" onclick="myFunction2()"></button>
-                </div>
-            </div>
-            <div class="text-body" style="margin: 11px; height: 80%;  overflow-y: scroll;">
-                <img style="width: 100%;" src="https://f2.toyhou.se/file/f2-toyhou-se/images/44410183_TN3Yem5eULcQ2Gc.png?1680777065"/> <br/>
-                <mark2 style="color: #222"> ★ About me</mark2>
+        
 
-                <p>
-                    Somw of you guys would know but my name is
-                    <mark1>Newton Yve-Carter</mark1>,
-                    Newt Yve for short. I draw and shit idk im not him I'm doin free labour for him
-                </p>
-                <p>
-                    My preferred pronouns are
-                    <mark1>he/him</mark1>
-                    . I identify as transgender, but I do not use any sexuality
-                    labels. I'm currently 20. I probably won't update this part but
-                    do expect me to be at least 20 lol.
-                </p>
-            </div>
+           
+
+
+
+
+            <script>
+                /*This is BYF*/
+                function myFunction() {
+                    const alo = document.getElementsByClassName(".notdeadbox");
+                    if (alo.style.display === "block") {
+                        alo.style.display = "none";
+                    } else {
+                        x.style.display = "block";
+                    }
+                }
+                function saveChanges() {
+                   
+                    alert("! You do not have permission to edit this text!");
+                }
+
+                function showAlert(title, message) {
+    const alertBox = document.createElement('div');
+    alertBox.className = 'custom-alert';
+    alertBox.innerHTML = `
+    <div class="title-bar" style="color:#fff;font-weight:700;letter-spacing:0;"> ATTENTION </div>
+      <p>${title}</p>
+      <p>${message}</p>
+      <button onclick="document.body.removeChild(this.parentElement)">OK</button>
+    `;
+    document.body.appendChild(alertBox);
+  }
+            </script>
+           
+            <script>
+                document
+                    .querySelector(".playpause")
+                    .addEventListener("click", playpause);
+
+                function playpause() {
+                    if (
+                        document.querySelector(".playpause").innerHTML ==
+                        '<i class="fas fa-play"></i>'
+                    ) {
+                        document.querySelector("#musicsrc").play();
+                        document.querySelector(".playpause").innerHTML =
+                            '<i class="fas fa-pause"></i>';
+                    } else {
+                        document.querySelector("#musicsrc").pause();
+                        document.querySelector(".playpause").innerHTML =
+                            '<i class="fas fa-play"></i>';
+                    }
+                }
+            </script>
+
+                <script>
+  const messages = [
+   "Bạc quá cũng không tốt nhỉ?",
+      "Vỏ cá là cái gì cơ??",
+      "Năm, mười, mười lăm...",
+                    "Ặc...! vỏ này thúi rồi!",
+      "Hình như vỏ này có mắt hả?",
+      "Sao mình lại đi đào cái này vậy?"
+  ];
+
+   function displayRandomMessage() {
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    const messageElement = document.getElementById("message");
+    if (messageElement) { // Ensure the element exists
+      messageElement.innerText = messages[randomIndex];
+    }
+  }
+
+  setInterval(displayRandomMessage, 6000);
+</script>
+ 
         </div>
-
-        <div
-            class="window"
-            style="
-                width: 200px;
-                height: 150px;
-                margin-left: -450px;
-                margin-top: 200px;
-                display: none;
-                position: absolute;
-                z-index: 11;
-            "
-            id="media"
-        >
-            <div class="title-bar">
-                <div class="title-bar-text">media</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close" onclick="yourFunction2()"></button>
-                </div>
-            </div>
-            <div class="text-body" style="margin: 11px; height: 70%; overflow-y: scroll">
-                <mark2>What I like (recently)</mark2>
-                <p>
-                    Dungeon Meshi and Dungeons and daddies. I'm inactive in all else,
-                    but still interested in Adventure time, Witch Hat Atelier,
-                    Haikyuu!! Youtube/streamer: Chad
-                    Chad, ManlyBadassHero
-                </p>
-
-                <mark2>My kins/favs (in general media)</mark2>
-                <p>
-                    Reagan Ridley (Inside Job), Mithrun (Dungeon Meshi), Glenn Close
-                    (Dungeons and Dragons), Princess Bubblegum (Adventure Time),
-                </p>
-
-                <mark2>My ships (in general media)</mark2>
-                <p>Kenny x Stan (South Park)</p>
-            </div>
-        </div>
-
-        <div
-            class="window"
-            style="
-                width: 200px;
-                height: 250px;
-
-                margin-left: 250px;
-                margin-top: 250px;
-                display: none;
-                position: absolute;
-                z-index: 10;
-            "
-            id="games"
-        >
-            <div class="title-bar">
-                <div class="title-bar-text">Games</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close" onclick="yourFunction()"></button>
-                </div>
-            </div>
-            <div class="text-body" style="margin: 11px; height: 80%; overflow-y: scroll;">
-                <mark2>!Games I do play</mark2>
-                <p>Minecraft, Stardew Valley, R1999, Pony Town</p>
-
-                <mark2>!Games I watched others play</mark2>
-                <p>
-                    NEEDY STREAMER OVERLOAD, That's not my neighbour, Iron Lungs,
-                    Little Miss Fortune, Papers Please, Ace Attorney/TGAA, OMORI and
-                    lots of RPGmaker games, almost all games played by
-                    ManlyBadassHero
-                </p>
-
-                <mark2>!kins/favs/ships</mark2>
-                <p>
-                    Ame-chan, Abigail, Robin, Phoenix
-                    Wright (x) Miles Edgeworth, Herlock Sholmes
-                </p>
-            </div>
-        </div>
-
-        <div
-            class="window"
-            style="
-                width: 200px;
-                height: 250px;
-
-                margin-left: 400px;
-                margin-top: 10px;
-                display: none;
-                position: absolute;
-                z-index: 10;
-            "
-            id="music"
-        >
-            <div class="title-bar">
-                <div class="title-bar-text">Music</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close" onclick="yourFunction3()"></button>
-                </div>
-            </div>
-            <div class="text-body" style="margin: 11px; height: 80%; overflow-y: scroll">
-                <mark2>!Heads-up</mark2>
-                <p>
-                    I don't care if
-                    you listen to them or not but do be aware of what they do outside
-                    of their music career. I'm very serious about the Palestine situation!
-                </p>
-
-                <mark2>!Comfort artists</mark2>
-                <p>
-                    Mitski, The Army The Navy, Hozier, The Oh Hellos
-                </p>
-
-                <mark2>!Comfort songs</mark2>
-                <p>
-                    Abbey, Me and my husband, Nobody, My Danish Sweetheart, Last
-                    words of a Shooting Star, Francis Forever, I bet on losing dogs,
-                    Your best American girl, My love mine all mine (Mitski)
-                    Persimmon, Play the Music, (The Army The Navy) Good luck, babe!,
-                    (Chappel Roan) Not strong enough, Night shift, Cool About it,
-                    (boygenius) Master of Puppets (METALLICA), DEATH (Melanie
-                    Martinez) Work song, Too Sweet, Eat the young, Would That I
-                    (Hozier) Gold Rush, Mirrorball, Champagne problems, Hoax,
-                    Cardigan, Ivy (Taylor Swift - i do hate her btw)
-                </p>
-                <mark2>!Musicals (yes i was a Disney child)</mark2>
-                <p>
-                    Hamilton, Ride the Cyclone, Heathers, Mean Girls, Be more chill
-                </p>
-            </div>
-        </div>
-
-        <div
-            class="window"
-            style="
-                width: 250px;
-                height: 350px;
-                margin-left: 250px;
-                margin-top: 50px;
-                display: none;
-                position: absolute;
-                z-index: 10;
-            "
-            id="guestbook"
-        >
-            <div class="title-bar">
-                <div class="title-bar-text">Tell me you were here</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close" onclick="guestbookmeow()"></button>
-                </div>
-            </div>
-            <div style="margin: 11px; height: 200px; width: 100%;">
-            <div id="c_widget">
-                <iframe src="https://www5.cbox.ws/box/?boxid=950751&boxtag=XAPIfp" width="90%" height="300px" allowtransparency="yes" allow="autoplay" frameborder="2px" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
-            </div>
-               
-            </div>
-        </div>
-
-        <script>
-            /*This is BYF*/
-            function myFunction() {
-                var x = document.getElementById("BYF");
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-            }
-        </script>
-        <script>
-            function myFunction2() {
-                var x = document.getElementById("intro");
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-            }
-        </script>
-
-        <script>
-            function yourFunction2() {
-                var x = document.getElementById("media");
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-            }
-        </script>
-
-        <script>
-            function yourFunction3() {
-                var x = document.getElementById("music");
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-            }
-        </script>
-
-        <script>
-            function yourFunction() {
-                var x = document.getElementById("games");
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-            }
-        </script>
-
-        <script>
-            function guestbookmeow() {
-                var x = document.getElementById("guestbook");
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-            }
-        </script>
-
-        <script>
-            function OCmeow() {
-                var x = document.getElementById("OC");
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-            }
-        </script>
-
-        <script>
-            document
-                .querySelector(".playpause")
-                .addEventListener("click", playpause);
-
-            function playpause() {
-                if (
-                    document.querySelector(".playpause").innerHTML ==
-                    '<i class="fas fa-play"></i>'
-                ) {
-                    document.querySelector("#musicsrc").play();
-                    document.querySelector(".playpause").innerHTML =
-                        '<i class="fas fa-pause"></i>';
-                } else {
-                    document.querySelector("#musicsrc").pause();
-                    document.querySelector(".playpause").innerHTML =
-                        '<i class="fas fa-play"></i>';
-                }
-            }
-        </script>
-
-        <script>
-            <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-            <link rel="stylesheet" href="/resources/demos/style.css">
-            <script src="https://code.jquery.com/jquery-3.6.0.js">
-        </script>
-        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     </body>
 </html>
