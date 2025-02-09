@@ -1,0 +1,797 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script>
+            window.location.replace("#home");
+        </script>
+        
+        <title> > Hướng dẫn sử dụng < </title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://pixels.crd.co/assets/images/gallery143/c142f7a4.gif?v=87a16b78"
+        />
+        <meta property="og:url" content=".cc/iv.archive" />
+        <meta property="og:title" content="★ Hướng dẫn sử dụng" />
+        <meta
+            property="og:description"
+            content="101 dạy nấu Newt Yve trong hầm ngục"
+        />
+        <link rel="stylesheet" href="https://unpkg.com/98.css" />
+        <style>
+            @font-face {
+  font-family: yah;
+  src: url(https://unpkg.com/98.css@0.1.16/dist/ms_sans_serif.woff) format("woff");
+  src: url(https://unpkg.com/98.css@0.1.16/dist/ms_sans_serif.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+            a:hover {
+                cursor: help;
+            }
+            #musicplayer {
+                display: grid;
+                grid-template-columns: 20px auto;
+                position: absolute;
+                bottom: 0;
+                margin-left: 42%;
+                margin-bottom: 10px;
+                align-items: center;
+                width: 160px;
+                font-size: 11px;
+                color: #ff77ad;
+                line-height: 140%;
+
+                background-color: silver;
+                box-shadow:
+                    inset -1px -1px #0a0a0a,
+                    inset 1px 1px #fff,
+                    inset -2px -2px grey,
+                    inset 2px 2px #dfdfdf;
+                filter: drop-shadow(0px 1px #00000030) drop-shadow(0 -1px #00000030)
+                    drop-shadow(1px 0 #00000030) drop-shadow(-1px 0 #00000030);
+            }
+
+            #musictitle {
+                font-family: inherit;
+                color: black;
+                overflow: hidden;
+                white-space: nowrap;
+                display: inline-block;
+                width: calc(100% - 10px - 1px);
+                margin-left: calc(5px);
+            }
+
+            #musicpixel {
+                width: 120%;
+                padding-top: 0px;
+
+                box-shadow:
+                    inset -1px -1px #0a0a0a,
+                    inset 1px 1px #fff,
+                    inset -2px -2px grey,
+                    inset 2px 2px #dfdfdf;
+                position: relative;
+                min-height: 15px;
+                background: white;
+            }
+
+            .overlay {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                transition: 0.3s ease;
+                background: white;
+            }
+
+            #musicplayer:hover .overlay {
+                opacity: 0;
+                transition: 0.3s ease;
+            }
+
+            .playpause {
+                padding: 5px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .playpause:hover {
+                cursor: help;
+            }
+
+            #musicpixel img {
+                display: block;
+            }
+
+            .marquee {
+                display: inline-block;
+                padding-left: 100%;
+                animation: marquee 5s linear infinite;
+                font-family: arial;
+                color: #222;
+            }
+
+            @keyframes marquee {
+                0% {
+                    transform: translate(0, 0);
+                }
+                100% {
+                    transform: translate(-100%, 0);
+                }
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                width: auto;
+                height: 100dvh;
+                overflow: hidden;
+                background-color: #55aaaa;
+            }
+
+            .deadbox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                border: none;
+                height: 100px;
+                top: 0;
+                padding: 5px;
+                background-color: #fff;
+                box-sizing: border-box;
+                padding: 3px 4px;
+                overflow-y: scroll;
+                border-radius: 0;
+                box-shadow:
+                    inset -1px -1px #fff,
+                    inset 1px 1px grey,
+                    inset -2px -2px #dfdfdf,
+                    inset 2px 2px #0a0a0a;
+            }
+            .deadbox:target {
+                display: block;
+            }
+            .deadbox:not(:target) {
+                display: none;
+            }
+            .notdeadbox {
+                background: none;
+            }
+            .notdeadbox:target {
+                display: block;
+            }
+            .notdeadbox:not(:target) {
+                display: none;
+            }
+            mark2 {
+                text-decoration: underline;
+                font-weight: 700;
+            }
+            mark1 {
+                font-weight: 700;
+            }
+
+            button:hover {
+                cursor: help;
+            }
+
+            .text-body  {
+               margin: 10px;
+                position: relative;
+                background: #fff;
+                border-radius: 0;
+                box-shadow:
+                    inset -1px -1px #fff,
+                    inset 1px 1px grey,
+                    inset -2px -2px #dfdfdf,
+                    inset 2px 2px #0a0a0a;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="window" style="width: 300px; position: relative">
+            <div class="title-bar">
+                <div class="title-bar-text">You have so much to discover still</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div
+                class="window-body"
+                style="width: 30%; float: left; font-size: 15px"
+            >
+                 <img
+                    src="https://pixels.crd.co/assets/images/gallery116/2eb51134.gif?v=87a16b78"
+                />
+                <mark1 style="margin-bottom: 7px;">NEWT </mark1>
+               
+                <img
+                    style="box-shadow:
+                    inset -1px -1px #fff,
+                    inset 1px 1px grey,
+                    inset -2px -2px #dfdfdf,
+                    inset 2px 2px #0a0a0a; border-radius: 0; padding: 2px; width: 100px; margin-top: 5px; margin-bottom: 5px;"
+                    src="https://i.pinimg.com/564x/f9/90/65/f9906593b9da5108ceb4615d0809b287.jpg"
+                />
+                <nav>
+                    <select style="width:105px;" onchange="location = this.value;">
+                        <option value="#home">1 - home</option>
+                        <option value="#two">2 - about me</option>
+                        <option value="#three">3 - media</option>
+                        <option value="#four">4 - secret</option>
+                        <option value="#five">5 - faq</option>
+                    </select>
+                </nav>
+            </div>
+            <div
+                class="window-body"
+                style="width: 55%; float: right; position: relative"
+            >
+                <div
+                    class="deadbox"
+                    id="home"
+                    style="
+                        position: absolute;
+                        width: 160px;
+                        height: 130px;
+                        overflow-y: scroll;
+                    "
+                >
+                    <img style="width: 100%;" src="https://f2.toyhou.se/file/f2-toyhou-se/images/49105933_NhJmW8wyXQwtDAK.gif"/>
+                    <mark2>@ what is this</mark2>
+                    <br />
+                    Hello, you've come to the right place. All that should be known
+                    about me is on here. there is music, if you're interested! Click
+                    the little bug to listen to the song, and again to stop. If not,
+                    let's just skip to the chase and click the drop-down menu for
+                    more info on me!!! <br/>
+                    <img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/68323908_wLR.gif"/>
+                </div>
+            </div>
+
+            <div
+                class="window-body"
+                style="width: 55%; float: right; position: relative"
+            >
+                <div
+                    class="deadbox"
+                    id="three"
+                    style="
+                        position: absolute;
+                        width: 160px;
+                        height: 130px;
+                        overflow-y: scroll;
+                        margin-top: -16px;
+                    "
+                >
+                    Check these out :3 Also I don't talk about things I like after a
+                    while bc I have 0 object permanence. Click the "X" button to
+                    close small tabs.
+                    <br/>
+                    <a onclick="yourFunction2()">
+                        <img
+                            src="https://pixels.crd.co/assets/images/gallery40/313d59c5.gif?v=87a16b78"
+                        />
+                        <mark2 style="color: #222">!General media</mark2>
+                    </a>
+                    <br />
+
+                    <a onclick="yourFunction()">
+                        <img
+                            src="https://pixels.crd.co/assets/images/gallery106/ecca9a8d.gif?v=87a16b78"
+                        />
+
+                        <mark2 style="color: #222">!Games</mark2>
+                    </a>
+
+                    <a onclick="yourFunction3()">
+                        <img
+                            src="https://pixels.crd.co/assets/images/gallery48/28606c9c.gif?v=87a16b78"
+                        />
+
+                        <mark2 style="color: #222">!Music</mark2>
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="window-body"
+                style="width: 55%; float: right; position: relative"
+            >
+                <div
+                    class="deadbox"
+                    id="two"
+                    style="
+                        position: absolute;
+                        margin-top: -32px;
+                        width: 160px;
+                        height: 130px;
+                        overflow-y: scroll;
+                    "
+                >
+                    Click on something fun!!^_^ Click the "X" button to close small
+                    tabs.
+                    <br />
+
+                    <a onclick="myFunction2()">
+                        <img
+                            src="https://pixels.crd.co/assets/images/gallery72/345c8fe5.gif?v=87a16b78"
+                        />
+                        <mark2 style="color: #222">!About me</mark2>
+                    </a>
+                    <br />
+
+                    <a onclick="myFunction()">
+                        <img
+                            src="https://pixels.crd.co/assets/images/gallery64/d6806eb2.gif?v=87a16b78"
+                        />
+                        <mark2 style="color: #222">!BYF</mark2>
+                    </a>
+                </div>
+            </div>
+
+            <div style="width: 55%; float: right; position: relative">
+                <div
+                    class="notdeadbox"
+                    id="four"
+                    style="
+                        position: absolute;
+                        width: 160px;
+                        height: 130px;
+                        overflow: hidden;
+                        margin-top: -40px;
+                        margin-left: -8px;
+                    "
+                >
+                    Wow you saw secret and you'd still click huh? &gt;:[ It's okay,
+                    no actual secret is here. But there is a lot of info you
+                    normally wouldn't care about.
+                     <br />
+                    <br />
+                    <div
+                        style="
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        
+                        "
+                    >
+                        <button style="height: 50px;" onclick="guestbookmeow()">
+                            <img
+                               
+                                src="https://pixels.crd.co/assets/images/gallery15/e8b3f1aa.gif?v=2942f085"
+                            /> <br/>
+                            <mark2 style="color: #222">Guest Book</mark2>
+                        </button>
+                        <br />
+
+                        <button style="height: 50px;" onclick="OCmeow()">
+                            <img
+                                src="https://pixels.crd.co/assets/images/gallery64/d6806eb2.gif?v=87a16b78"
+                            />
+                            <mark2 style="color: #222"> Gallery </mark2>
+                        </button>
+                    </div>
+                </div>
+            </div>
+<div
+                class="window-body"
+                style="width: 55%; float: right; position: relative"
+            >
+                <div
+                    class="deadbox"
+                    id="five"
+                    style="
+                        position: absolute;
+                        width: 160px;
+                        height: 130px;
+                        overflow-y: scroll;
+                        margin-top: -48px;
+                    "
+                >
+This is where I would store my FAQs !! IF I HAD ANY >:[
+                    
+                </div>
+      </div>
+
+
+            <div id="musicplayer">
+                <div id="musicpixel">
+                    <img
+                        src="https://pixels.crd.co/assets/images/gallery58/440d8998.gif?v=87a16b78"
+                    />
+                    <div class="overlay">
+                        <img
+                            src="https://pixels.crd.co/assets/images/gallery58/d53ee4e1.gif?v=87a16b78"
+                        />
+                        <div class="playpause"><i class="fas fa-play"></i></div>
+                    </div>
+                </div>
+                <div id="musictitle">
+                    <span class="marquee" style="font-family: Pixelated MS Sans Serif;">ozowa - nuvfr</span>
+                </div>
+            </div>
+        </div>
+        <audio
+            id="musicsrc"
+            loop=""
+            src="https://files.catbox.moe/33ugvg.mp3"
+        ></audio>
+        <div
+            class="window"
+            style="
+                width: 200px;
+                height: 150px;
+
+                margin-left: 250px;
+                margin-top: 250px;
+                display: none;
+                position: absolute;
+                z-index: 10;
+            "
+            id="BYF"
+        >
+            <div class="title-bar">
+                <div class="title-bar-text">BYF</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close" onclick="myFunction()"></button>
+                </div>
+            </div>
+            <div class="text-body" style="margin: 11px; height: 70%; overflow-y: scroll">
+                <img src="https://pixels.crd.co/assets/images/gallery10/be491fff.gif?v=87a16b78"/>
+                <p>
+                   <mark2> ★ My content <br/> </mark2>
+- bit spammy with shares/rt/reblogs <br/>
+- posts about the most mundane things <br/>
+- make poor attempts at humour <br/>
+- also make very long rants about any subject EVER <br/>
+- family + mental health rants (i do make sure you can usually exclude these) <br/>
+- incoherent FB status spams <br/>
+<br/>
+<mark2> ★ What I avoid <br/> </mark2>
+- mihoyo games (esp genshin) <br/>
+- EN vtubers <br/>
+- Rap Viet <br/>
+- purely rant accounts <br/>
+- purely work accounts <br/>
+*Exclusions only for acquaintances <br/>
+<br/>
+                    <mark2> ★If you don't like me so much (even after becoming moots)<br/> </mark2>
+Feel free to mute /unfriend/ unfollow/block me!! I'll not take any of it personally. I also expect the same thing from you btw!<br/>
+Disagreements are unavoidable, and don't feel bad if we aren't always on the same side of things. <br/>
+                </p>
+            </div>
+        </div>
+        <div
+            class="window"
+            style="
+                width: 200px;
+            height: 300px;
+           
+                margin-left: -300px;
+                margin-top: -200px;
+                display: none;
+                position: absolute;
+                z-index: 10;
+            "
+            id="intro"
+        >
+            <div class="title-bar">
+                <div class="title-bar-text">Introduction</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close" onclick="myFunction2()"></button>
+                </div>
+            </div>
+            <div class="text-body" style="margin: 11px; height: 80%;  overflow-y: scroll;">
+                <img style="width: 100%;" src="https://f2.toyhou.se/file/f2-toyhou-se/images/44410183_TN3Yem5eULcQ2Gc.png?1680777065"/> <br/>
+                <mark2 style="color: #222"> ★ About me</mark2>
+
+                <p>
+                    Somw of you guys would know but my name is
+                    <mark1>Newton Yve-Carter</mark1>,
+                    Newt Yve for short. I draw and shit idk im not him I'm doin free labour for him
+                </p>
+                <p>
+                    My preferred pronouns are
+                    <mark1>he/him</mark1>
+                    . I identify as transgender, but I do not use any sexuality
+                    labels. I'm currently 20. I probably won't update this part but
+                    do expect me to be at least 20 lol.
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="window"
+            style="
+                width: 200px;
+                height: 150px;
+                margin-left: -450px;
+                margin-top: 200px;
+                display: none;
+                position: absolute;
+                z-index: 11;
+            "
+            id="media"
+        >
+            <div class="title-bar">
+                <div class="title-bar-text">media</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close" onclick="yourFunction2()"></button>
+                </div>
+            </div>
+            <div class="text-body" style="margin: 11px; height: 70%; overflow-y: scroll">
+                <mark2>What I like (recently)</mark2>
+                <p>
+                    Dungeon Meshi and Dungeons and daddies. I'm inactive in all else,
+                    but still interested in Adventure time, Witch Hat Atelier,
+                    Haikyuu!! Youtube/streamer: Chad
+                    Chad, ManlyBadassHero
+                </p>
+
+                <mark2>My kins/favs (in general media)</mark2>
+                <p>
+                    Reagan Ridley (Inside Job), Mithrun (Dungeon Meshi), Glenn Close
+                    (Dungeons and Dragons), Princess Bubblegum (Adventure Time),
+                </p>
+
+                <mark2>My ships (in general media)</mark2>
+                <p>Kenny x Stan (South Park)</p>
+            </div>
+        </div>
+
+        <div
+            class="window"
+            style="
+                width: 200px;
+                height: 250px;
+
+                margin-left: 250px;
+                margin-top: 250px;
+                display: none;
+                position: absolute;
+                z-index: 10;
+            "
+            id="games"
+        >
+            <div class="title-bar">
+                <div class="title-bar-text">Games</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close" onclick="yourFunction()"></button>
+                </div>
+            </div>
+            <div class="text-body" style="margin: 11px; height: 80%; overflow-y: scroll;">
+                <mark2>!Games I do play</mark2>
+                <p>Minecraft, Stardew Valley, R1999, Pony Town</p>
+
+                <mark2>!Games I watched others play</mark2>
+                <p>
+                    NEEDY STREAMER OVERLOAD, That's not my neighbour, Iron Lungs,
+                    Little Miss Fortune, Papers Please, Ace Attorney/TGAA, OMORI and
+                    lots of RPGmaker games, almost all games played by
+                    ManlyBadassHero
+                </p>
+
+                <mark2>!kins/favs/ships</mark2>
+                <p>
+                    Ame-chan, Abigail, Robin, Phoenix
+                    Wright (x) Miles Edgeworth, Herlock Sholmes
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="window"
+            style="
+                width: 200px;
+                height: 250px;
+
+                margin-left: 400px;
+                margin-top: 10px;
+                display: none;
+                position: absolute;
+                z-index: 10;
+            "
+            id="music"
+        >
+            <div class="title-bar">
+                <div class="title-bar-text">Music</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close" onclick="yourFunction3()"></button>
+                </div>
+            </div>
+            <div class="text-body" style="margin: 11px; height: 80%; overflow-y: scroll">
+                <mark2>!Heads-up</mark2>
+                <p>
+                    I don't care if
+                    you listen to them or not but do be aware of what they do outside
+                    of their music career. I'm very serious about the Palestine situation!
+                </p>
+
+                <mark2>!Comfort artists</mark2>
+                <p>
+                    Mitski, The Army The Navy, Hozier, The Oh Hellos
+                </p>
+
+                <mark2>!Comfort songs</mark2>
+                <p>
+                    Abbey, Me and my husband, Nobody, My Danish Sweetheart, Last
+                    words of a Shooting Star, Francis Forever, I bet on losing dogs,
+                    Your best American girl, My love mine all mine (Mitski)
+                    Persimmon, Play the Music, (The Army The Navy) Good luck, babe!,
+                    (Chappel Roan) Not strong enough, Night shift, Cool About it,
+                    (boygenius) Master of Puppets (METALLICA), DEATH (Melanie
+                    Martinez) Work song, Too Sweet, Eat the young, Would That I
+                    (Hozier) Gold Rush, Mirrorball, Champagne problems, Hoax,
+                    Cardigan, Ivy (Taylor Swift - i do hate her btw)
+                </p>
+                <mark2>!Musicals (yes i was a Disney child)</mark2>
+                <p>
+                    Hamilton, Ride the Cyclone, Heathers, Mean Girls, Be more chill
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="window"
+            style="
+                width: 250px;
+                height: 350px;
+                margin-left: 250px;
+                margin-top: 50px;
+                display: none;
+                position: absolute;
+                z-index: 10;
+            "
+            id="guestbook"
+        >
+            <div class="title-bar">
+                <div class="title-bar-text">Tell me you were here</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close" onclick="guestbookmeow()"></button>
+                </div>
+            </div>
+            <div style="margin: 11px; height: 200px; width: 100%;">
+            <div id="c_widget">
+                <iframe src="https://www5.cbox.ws/box/?boxid=950751&boxtag=XAPIfp" width="90%" height="300px" allowtransparency="yes" allow="autoplay" frameborder="2px" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+            </div>
+               
+            </div>
+        </div>
+
+        <script>
+            /*This is BYF*/
+            function myFunction() {
+                var x = document.getElementById("BYF");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+        <script>
+            function myFunction2() {
+                var x = document.getElementById("intro");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            function yourFunction2() {
+                var x = document.getElementById("media");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            function yourFunction3() {
+                var x = document.getElementById("music");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            function yourFunction() {
+                var x = document.getElementById("games");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            function guestbookmeow() {
+                var x = document.getElementById("guestbook");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            function OCmeow() {
+                var x = document.getElementById("OC");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            document
+                .querySelector(".playpause")
+                .addEventListener("click", playpause);
+
+            function playpause() {
+                if (
+                    document.querySelector(".playpause").innerHTML ==
+                    '<i class="fas fa-play"></i>'
+                ) {
+                    document.querySelector("#musicsrc").play();
+                    document.querySelector(".playpause").innerHTML =
+                        '<i class="fas fa-pause"></i>';
+                } else {
+                    document.querySelector("#musicsrc").pause();
+                    document.querySelector(".playpause").innerHTML =
+                        '<i class="fas fa-play"></i>';
+                }
+            }
+        </script>
+
+        <script>
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+            <link rel="stylesheet" href="/resources/demos/style.css">
+            <script src="https://code.jquery.com/jquery-3.6.0.js">
+        </script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    </body>
+</html>
