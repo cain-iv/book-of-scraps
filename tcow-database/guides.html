@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title> Life guides </title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://pixels.crd.co/assets/images/gallery143/c142f7a4.gif?v=87a16b78"
+        />
+        <meta property="og:url" content=".org/cogitoergosum" />
+        <meta property="og:title" content="ARCHIVE - GUIDES" />
+        <meta
+            property="og:description"
+            content="!That is it, my friend"
+        />
+    
+</head>
+<style>
+    body {
+        background-color: #0f0f0f;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: arial;
+        width: auto;
+                height: 90dvh;
+    }
+    hr.solid {
+  border-top: 1px solid #000;
+}
+   .boxspan {
+       width: 80%;
+       height: max-content;
+       font-size: 15px;
+       padding: 10px;
+       background-color: #fff;
+       border: 1px solid #000;
+   } 
+    .list{
+        display:none;
+        width: 100%;
+    }
+
+    .guider {
+        display: none;
+    }
+
+    .comment {
+        color: green;
+        font-size: 12px;
+        margin: 0px;
+    }
+</style>
+<body>
+    <div class="boxspan">
+        <b style="font-size:20px;">LIST OF AVAILABLE RESOURCES</b> <br/>
+        Hello, here is a list of guides of our daily life. Most scenarios in need of a guide has been 
+        added here. If any situation seems new and you panic, feel free to fuck things up and we'll add
+        a new guide for you later :)
+        <br/>
+      <button  data-target="newalter" onclick="showAndOff(this)"> new alter </button> 
+        <button data-target="workandstudy" onclick="showAndOff(this)"> work and study </button> 
+        <button data-target="medical" onclick="showAndOff(this)"> medical </button> 
+        
+        
+        <div class="list" id="newalter">
+              <hr class="solid"/>
+        explanation: hi if you have no idea what's going on, don;t fret
+        </div>
+
+        
+        <div class="list" id="workandstudy">
+              <hr class="solid"/>
+        <button data-target="ama" onclick="showAndOff(this)">
+         AMA
+        </button>
+           <button data-target="classmates" onclick="showAndOff(this)">
+         Classmates
+        </button> 
+        <div id="ama" class="guider">
+        <br/>  <b>Work hours:</b> <br/>
+            - 6h30 to 8h00 on Mon, Wed, Fri => leave at 5h45-6h<br/> 
+            - 6h45 to 8h15 on Tue, Thur => leave at 6h <br/>
+            <p class="comment"> *You have to arrive at least 15 minutes early, although for the Tue Thu class I
+            suggest coming at least 20. So the appropriate hour to leave for the first one is 5h45 while the other is 6h.</p>
+
+            <br/>  <b>About the work:</b> <br/>
+            - After arriving, you may or may not retrieve your <b>folder</b>. Fine if you don't, just make sure you write down your shift
+            because they use it to account for your salary
+            <br/> - The first tasks (in the first unofficial half hour of the class) are arranging tables, cleaning the whiteboard*, and
+            collecting communication books.
+            <br/> In the communication book, you write the date and the lesson (not available if its Dave's class). Check the last page
+    for assignment, then check their homework (white cover book). If they did their hw, tick the 2 star box. If not then tick 1.
+            <br/> <u>Check previous pages and write down similar comments, most of the time you don't have to be particular
+            about it. </u>
+        </div>
+
+            <div id="classmates" class="guider">
+                <br/>
+                Social interactions: <br/>
+                People you can talk to casually and is fine with you being
+            </div>
+
+    
+    </div>
+  
+        <div class="list" id="medical">   <hr class="solid"/> 
+            medical tfff
+        </div>
+    <script>
+    function showAndOff(button) {
+        const targetId = button.getAttribute('data-target');
+        const element = document.getElementById(targetId);
+        if (element.style.display === 'block') {
+            element.style.display = 'none';
+        } else {
+            element.style.display = 'block';
+        }
+    }
+
+    </script>
+</body>
