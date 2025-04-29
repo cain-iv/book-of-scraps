@@ -1,104 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>VANILLA CRINGE COMP</title>
+        <script>
+            window.location.replace("#home");
+        </script>
+<script src="https://chattable.neocities.org/scripts/main.min.js"></script>
+        <title>&gt; Hướng dẫn sử dụng &lt;</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://pixels.crd.co/assets/images/gallery143/c142f7a4.gif?v=87a16b78"
+        />
+        <meta property="og:url" content=".cc/iv.archive" />
+        <meta property="og:title" content="★ Hướng dẫn sử dụng" />
+        <meta
+            property="og:description"
+            content="101 dạy nấu Newt Yve trong hầm ngục"
+        />
+        <link rel="stylesheet" href="https://unpkg.com/98.css" />
         <style>
-        
-       
-        .wave-text span {
-    display: inline-block;
-    font-size: 4rem;
-    animation: wave 2s ease-in-out infinite;
-    color: #845930;
-    font-family: sans-serif;
-}
+            @font-face {
+                font-family: yah;
+                src: url(https://unpkg.com/98.css@0.1.16/dist/ms_sans_serif.woff)
+                    format("woff");
+                font-weight: 400;
+                font-style: normal;
+            }
 
-.wave-text span:nth-child(1) {
-    animation-delay: 0s;
-}
-.wave-text span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.wave-text span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-.wave-text span:nth-child(4) {
-    animation-delay: 0.6s;
-}
+            a:hover {
+                cursor: help;
+            }
+            #musicplayer {
+                display: grid;
+                grid-template-columns: 20px auto;
+                position: absolute;
+                bottom: 0;
+                margin-left: 0%;
+                align-items: center;
+                width: 175px;
+                height: 35px;
+                font-size: 11px;
+                color: #ff77ad;
+                line-height: 140%;
 
-.wave-text span:nth-child(5) {
-    animation-delay: 0.8s;
-}
+                background-color: silver;
+                box-shadow:
+                    inset -1px -1px #0a0a0a,
+                    inset 1px 1px #fff,
+                    inset -2px -2px grey,
+                    inset 2px 2px #dfdfdf;
+                filter: drop-shadow(0px 1px #00000030) drop-shadow(0 -1px #00000030)
+                    drop-shadow(1px 0 #00000030) drop-shadow(-1px 0 #00000030);
+            }
 
-.wave-text span:nth-child(6) {
-    animation-delay: 1s;
-}
+            #musictitle {
+                font-family: inherit;
+                color: black;
+                overflow: hidden;
+                white-space: nowrap;
+                display: inline-block;
+                width: calc(max-content + 5px);
+                margin-left: 15px;
+                
+            }
 
-.wave-text span:nth-child(7) {
-    animation-delay: 1.2s;
-}
+            #musicpixel {
+                width: 30px;
+                height: 30px;
+                padding-top: 0px;
+                box-shadow:
+                    inset -1px -1px #0a0a0a,
+                    inset 1px 1px #fff,
+                    inset -2px -2px grey,
+                    inset 2px 2px #dfdfdf;
+                position: relative;
+                min-height: 15px;
+                background: white;
+            }
 
-.wave-text span:nth-child(8) {
-    animation-delay: 1.4s;
-}
+            .overlay {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                transition: 0.3s ease;
+                background: white;
+            }
 
-.wave-text span:nth-child(9) {
-    animation-delay: 1.6s;
-}
+            #musicplayer:hover .overlay {
+                opacity: 0;
+                transition: 0.3s ease;
+            }
 
-.wave-text span:nth-child(10) {
-    animation-delay: 1.8s;
-}
+            .playpause {
+                padding: 5px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
 
-.wave-text span:nth-child(11) {
-    animation-delay: 2s;
-}
-@keyframes wave {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
+            .playpause:hover {
+                cursor: help;
+            }
 
-.running-loop-box {
- width: 400px;
-  height: 30px;
-  margin: 3px;
-  overflow: hidden;
-  position: relative;
-  white-space: nowrap;
-  
-  }
+            #musicpixel img {
+                display: block;
+            }
 
-  
-.running-loop-content {
-   position: absolute;
-    animation: left-to-right linear 10s infinite;
-  }
-  .actual-looped {
-    white-space: nowrap;
-    }
+            .marquee {
+                display: inline-block;
+                padding-left: 100%;
+                animation: marquee 4s linear infinite;
+                font-family: Pixelated MS Sans Serif;
+                color: #222;
+                
+            }
 
-@keyframes left-to-right {
-  from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
-.jumpPic{
-animation: wave 2s ease-in-out infinite;
-}
-.wave-container {
-position: absolute; z-index: 200; top:70px;
-}
-        body {
-         display: flex;
+            @keyframes marquee {
+                0% {
+                    transform: translate(0, 0);
+                }
+                100% {
+                    transform: translate(-100%, 0);
+                }
+            }
+            body {
+                display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -106,54 +140,456 @@ position: absolute; z-index: 200; top:70px;
                 width: auto;
                 height: 100dvh;
                 overflow: hidden;
-                font-family: sans-serif;
-                color:#845930}
+                background-color: #55aaaa;
+            }
+
+            button {
+                min-width: 20px !important;
+                padding: 0px;
+            }
+            .deadbox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                border: none;
+                top: 0;
+                padding: 5px;
+                background-color: #fff;
+                overflow-y: scroll;
+                border-radius: 0;
+                box-shadow:
+                    inset -1px -1px #fff,
+                    inset 1px 1px grey,
+                    inset -2px -2px #dfdfdf,
+                    inset 2px 2px #0a0a0a;
+                width: 340px !important;
+                height: 296px !important;
+             
+            }
+            .custom-alert {
+                position: absolute;
+                z-index: 20000;
+                background:silver;
+                box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+                padding:5px;
+                font-family: Pixelated MS Sans Serif;
                 
-           .guestbookCont {
-           position: relative;
-           overflow: hidden;
-           width: 400px;
-           height: 600px;
-           top: 120px;
-           left: -40px;
-           }
-           .guestbookWebpage {
-           position: absolute;
-           width: 400px;
-           height: 430px;
-           border: none;
-           overflow-y: hidden; 
-           margin-top: -120px;}
-           
-           .subtitle {position: relative; z-index: 200; top: 90px; left: 80px; color: #fff; -webkit-text-stroke: 1px #D4B56B;
-text-stroke: 1px #D4B56B; font-family: sans-serif;font-size: 40px;}
+            }
+            .deadbox:target {
+                display: block;
+            }
+            .deadbox:not(:target) {
+                display: none;
+            }
+            .notdeadbox {
+                background: none;
+            }
+            .notdeadbox:target {
+                display: block;
+            }
+            .notdeadbox:not(:target) {
+                display: none;
+            }
+            mark2 {
+                text-decoration: underline;
+                font-weight: 700;
+            }
+            mark1 {
+                font-weight: 600;
+            }
+
+            button:hover {
+                cursor: help;
+            }
+
+            .text-body {
+                margin: 10px;
+                position: relative;
+                background: #fff;
+                border-radius: 0;
+                box-shadow:
+                    inset -1px -1px #fff,
+                    inset 1px 1px grey,
+                    inset -2px -2px #dfdfdf,
+                    inset 2px 2px #0a0a0a;
+                padding: 5px;
+            }
+            hr.solid {
+                border-top: 1px solid #000;
+                width: 100%;
+                float: left;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                line-height: 15px;
+                width: 100%;
+            }
+            .vl {
+  border-left: 1px solid black;
+  height: 100%;
+}
         </style>
-</head>
-<body>
+    </head>
 
-<div id="fatass" style="display: flex; flex-direction: column;">
-<div style="position: absolute; margin-top: 460px; margin-left: 0px; width:100px; height: 50px; z-index: 100;"> <div class="running-loop-box">
-  <div class="running-loop-content">
-  <div class="actual-javascript:void(0);looped">
- Send button might be hidden after one message and im lazy... refresh to send more. 
-  Send button might be hidden after one message and im lazy... refresh to send more. 
-  </div>
-  </div>
+    <body>
+        <div class="window" style="width: 500px; position: relative">
+            <div class="title-bar">
+                <div id="message" class="title-bar-text">Vỏ cá màu bạc trong lòng đất</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div
+                style="
+                    height: max-content;
+                    background-color: #fff;
+                    padding: 3px 4px;
+                    border-radius: 0;
+                    box-shadow:
+                        inset -1px -1px #fff,
+                        inset 1px 1px grey,
+                        inset -2px -2px #dfdfdf,
+                        inset 2px 2px #0a0a0a;
+                "
+            >
+                <button
+                    style="min-width: 5px !important; padding: 3px"
+                    onclick="location='#home'"
+                >
+                    🏠︎
+                </button>
+                https://stellular.org/iv-archive
+                <button
+                    style="float: right; width: 3px"
+                    onclick="window.location='https://stellular.org/api/v1/project/iv-archive/files/login-window.html'"
+                >
+                    log out
+                </button>
+            </div>
+            <div
+                class="window-body"
+                style="width: 25%; float: left; font-size: 15px; margin-bottom: 0px"
+            >
+                <img
+                    style="
+                        box-shadow:
+                            inset -1px -1px #fff,
+                            inset 1px 1px grey,
+                            inset -2px -2px #dfdfdf,
+                            inset 2px 2px #0a0a0a;
+                        border-radius: 0;
+                        padding: 2px;
+                        width: 100px;
+                        margin-bottom: 5px;
+                    "
+                    src="https://i.pinimg.com/564x/f9/90/65/f9906593b9da5108ceb4615d0809b287.jpg"
+                />
+                <br />
 
-</div></div>
+                <mark1 style="margin-bottom: 7px">Newton Yve-Carter</mark1>
+                <br />
+                @iv.love.nyc
+                <br />
+                <i style="font-size: 12px; color: green">
+                    'i don't believe in my existence... still dont.'
+                </i>
+                <hr class="solid" style="width: 80%" />
+                <p style="font-size: 12px; margin: 0px">
+                    <b>Trạng thái:</b>
+                    <br />
+                    <img
+                        src="https://pixels.crd.co/assets/images/gallery116/2eb51134.gif?v=87a16b78"
+                    />
+                    wuh luh wuh
+                </p>
+
+                <hr class="solid" style="width: 80%" />
+                <br />
+                <b style="font-size: 12px">Đi đến:</b>
+                <nav style="margin-bottom: 20px;">
+                    <select
+                        style="width: 105px; position: relative; z-index: 1000"
+                        onchange="location = this.value;"
+                    >
+                        <option value="#home">1 - home</option>
+                        <option value="#two">2 - my interests </option>
+                        <option value="#three">3 - web projects</option>
+                        <option value="#four">4 - chats </option>
+                    </select>
+                </nav>
+            </div>
+            <div
+                class="window-body"
+                style="position: relative;"
+            >
+                
+                <div class="deadbox" id="home" spellcheck="false" contenteditable="true" style="position: relative">
+                
+
+                    <img
+                        style="width: 30%"
+                        src="https://web.archive.org/web/20091027083517im_/http://hk.geocities.com/hello300hk300/cute_036.gif"
+                    />
+                    <img
+                        style="width: 15%"
+                        src="https://y2k.neocities.org/stamps/tumblr_inline_pe6lntIIZX1v11djx_1280.gif"
+                    />
+                    <i style="color: brown">
+                        <br />
+                        ✳ Để xem về các phần khác, mọi người sử dụng dropbox bên mục
+                        "Đi đến" bên tay trái nhé!
+                    </i>
+                    <br />
+                    <hr class="solid" />
+                    <br />
+                    <br />
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <mark2>@Lần cuối cập nhật:</mark2>
+                                    27/12/2024
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    Các cập nhật nhỏ không quan trọng mình sẽ không bổ sung chính
+                    thức vào mục này.
+
+                    <br />
+                    <hr class="solid" />
+                    <br />
+                    <br />
+                    <mark2>@Tiểu sử</mark2>
+                    <br />
+                    ✳ Xin chào, mình là NYC (không phải ny cũ lẫn new york city),
+                    nhưng mà bình thường friendlist sẽ gọi mình là Ánh/Asnk/Tea. Mọi
+                    người chọn cái nào để gọi cũng được trừ 'nyc'.
+                    <br />
+                    ✳ Mình sử dụng song song tiếng Anh và tiếng Việt trên profile
+                    của mình, nhưng mà tiếng Anh thường sẽ nhiều hơn.
+                    <br />
+                    ✳ Đối với tiếng nào đi nữa thì mình vẫn sử dụng đại từ danh xưng
+                    nam và trung tính (he/they), các từ khác như anh chị cô chú gì
+                    cũng mong mọi người xử dụng nam hoặc trung tính nhé.
+                    <br />
+                    ✳ transmasc, unlabelled sexuality
+                    <br />
+                    <img
+                        src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/68323908_wLR.gif"
+                    />
+                    <br />
+                    <hr class="solid" />
+                     <mark2>@Tường nhà bao gồm </mark2> <br />
+                     ⊹ MÌNH CỰC KÌIIII WOKE <br/>
+                    ⊹ Nhiều spam về joke và meme
+                        <br />
+                         ⊹ Đăng nhiều về các chủ đề ngẫu nhiên khó nói trước, đời sống và sức khỏe tinh thần cá nhân
+                        <br />
+                         ⊹ Có <u>NSFW</u> nhưng thường sẽ không explicit/có warning
+                        <br />
+                       ⊹ Keyboard smash đúng nghĩa đen
+                        <br />
+                    <br/>
+                     <mark2>@Người không hạp với mình </mark2> <br />
+                       ⊹ Mình không add các bạn đăng nhiều về genshin impact/hsr/wuwa, rap viet, joke vùng miền và njsj en vtubers
+   <br />  ⊹ Không add các tài khoản rant (nhắc nhiều về suicidal thoughts, ý kiến chính trị dạng hot takes, gore posting...)
+                    Các bạn có đăng nhưng chia vào riêng các album hoặc/và exclude mình ra thì vẫn oke với mình nha.
+                 <br/>   ⊹  Ko add người không biết, không quan tâm gì tới tình hình ở Pal3st1n3 hiện tại (đặc biệt bênh vực các celeb/influence hoặc outright ủng hộ isnotr3al)
+                    <br />
+                    <p style="color: blue">
+                        Để biết thêm về cái mình thích và ghét thì mọi người đến mục
+                        <a href=""> interests </a> nhé
+                    </p>
+                    <hr class="solid" />
+                    <br />
+                    <br />
+                    <mark2>@FAQs:</mark2>
+                    <br />
+                    <i style="color: brown;">?Bạn có còn nhận comm không</i>
+                    <br /><br/>
+                    - Mình hiện không còn nhận comm nữa, và khả năng cao là sẽ không
+                    nhận comm trong thời gian sắp tới. Mình là sinh viên và đang có
+                    việc làm thêm nữa. Mình không muốn nhận comm mà không có khả năng
+                    hoàn thành tốt, mong bạn thông cảm!
+                    <br />
+                    <br />
+                    <i style="color: brown;">?Bạn vẽ bằng phần mềm gì/Bạn sử dụng cọ gì?</i>
+                    <br/>
+                  <p style="padding-bottom: 40px;">  Mình sử dụng Clip Studio Paint Pro là chính, lâu lâu có vẽ bằng
+                    Ibis Paint trên điện thoại. Set cọ cụ thể thì bị xóa khỏi store
+                    rồi huhu, nhưng mà miễn là cọ đầu dẹp và blend màu tốt thì mình
+                    sử dụng ok cả! </p>
+                    <div contenteditable="false" style="position: sticky;
+      bottom: 0; 
+      left: 0;
+                    
+                            
+      width: 97%; padding: 3px;
+      height: 22px; background-color: #c0c0c0;" > 
+                        <button  title="No editing permission" disabled="true"><b>B</b> </button>
+                        <button  title="No editing permission" disabled="true"><i>i</i></button>
+                        <button  title="No editing permission" disabled="true"><u>u</u></button>
+                     <button onclick=
+            "showAlert('You do not have permission to edit this text.', 'If this is indeed your account, please contact us.')" style="float:right; padding: 2px;"> Save changes</button>
+                    </div>
+                </div>
+                
+            </div>
+
+           
+               
+           
+
+            <div
+                class="window-body"
+                style="position: relative"
+            >
+                <div
+                    class="deadbox"
+                    id="two"
+                   style="position: relative"
+                >
+                <mark2>@Fandoms</mark2> <img src="https://pixels.crd.co/assets/images/gallery10/09c31c53.gif?v=99d3974e"/>
+<br/>―― Đang thích tập trung Arcane, The Magnus archives, Dungeon meshi, Dungeon and daddies
+<br/>―― Các fd mình ko active nhưng vẫn quan tâm: Adventure time, Witch Hat Atelier, Haikyuu!!, Gravity falls
+  <hr class="solid" />
+                  
+  <br/> <mark2>@Ships</mark2> <img src="https://pixels.crd.co/assets/images/gallery56/8f60b6ba.gif?v=99d3974e"/>
+  <br/>―― Jayce Talis x Viktor (Arcane), Kenny McCormick x Stan Marsh (South Park), Kuroo Tetsurou x Kenma Kozume (Haikyuu!), Phoenix Wright x Miles Edgeworth, Herlock Sholmes x Yujin Mikotoba (AA/TGAA)
+<hr class="solid" />
+                     <br/> <mark2>@Kins/Fav</mark2>
+                      <br/>―― Mithrun (Dungeon Meshi), Glenn Close (Dungeons and Dragons), Reagan Ridley (Inside Job), Princess Bubblegum (Adventure Time), Ame-chan (NEEDY STREAMER OVERLOAD), Viktor (Arcane)
+
+                 <p style="color: blue"><b>To be updated...</b></p>
+                </div>
+            </div>
+
+            <div
+                    class="deadbox"
+                    id="three"
+                  
+                > Empty vacuum for my future failures...<img src="https://pixels.crd.co/assets/images/gallery29/b8b5b6f3.gif?v=99d3974e"/> </div>
+           <div class="deadbox" id="four" style="overflow: hidden;">
+              <iframe style="height:300px;" src="https://www5.cbox.ws/box/?boxid=950751&boxtag=XAPIfp" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+           </div>
+            <div id="footer" style="float: left; width: 100%; position: relative; margin-top: -10px;">
+                <button disabled="true" style="padding: 1px; width: 100%; display: flex; flex-direction: row; color: black;">
+<div style="width: 25%;"> This blurb blog <br/> belongs to: </div>
+                    <div style="width: 40%; height: 100%; background-repeat: none; background-image: url('https://web.archive.org/web/20090730174718/http://hk.geocities.com/ccscardcaptorsakura/MOVIC/4.gif');
+    background-size: 100% auto; background-position: center;"> <p style="color: red; padding: 0;"> @iv.love.nyc </p> </div>
+                
+                    <div style="width: 35%;"> 
+                <div id="musicplayer">
+                <div id="musicpixel">
+                    <img style="width:95%; "
+                        src="https://pixels.crd.co/assets/images/gallery58/440d8998.gif?v=87a16b78"
+                    />
+                    <div class="overlay">
+                        <img 
+                            src="https://pixels.crd.co/assets/images/gallery58/d53ee4e1.gif?v=87a16b78"
+                        />
+                        <div class="playpause"><i class="fas fa-play"></i></div>
+                    </div>
+                </div>
+                <div id="musictitle">
+                    <span class="marquee" style="font-family: Pixelated MS Sans Serif;"> <- Click here for a song </span>
+                </div>
+            </div>
+                        <audio
+            id="musicsrc"
+            loop=""
+            src="https://files.catbox.moe/33ugvg.mp3"
+        ></audio>
+                </div>    
+                </button>
+            </div>
+
+           
+        
+
+           
+
+
+
+
+            <script>
+                /*This is BYF*/
+                function myFunction() {
+                    const alo = document.getElementsByClassName(".notdeadbox");
+                    if (alo.style.display === "block") {
+                        alo.style.display = "none";
+                    } else {
+                        x.style.display = "block";
+                    }
+                }
+                function saveChanges() {
+                   
+                    alert("! You do not have permission to edit this text!");
+                }
+
+                function showAlert(title, message) {
+    const alertBox = document.createElement('div');
+    alertBox.className = 'custom-alert';
+    alertBox.innerHTML = `
+    <div class="title-bar" style="color:#fff;font-weight:700;letter-spacing:0;"> ATTENTION </div>
+      <p>${title}</p>
+      <p>${message}</p>
+      <button onclick="document.body.removeChild(this.parentElement)">OK</button>
+    `;
+    document.body.appendChild(alertBox);
+  }
+            </script>
+           
+            <script>
+                document
+                    .querySelector(".playpause")
+                    .addEventListener("click", playpause);
+
+                function playpause() {
+                    if (
+                        document.querySelector(".playpause").innerHTML ==
+                        '<i class="fas fa-play"></i>'
+                    ) {
+                        document.querySelector("#musicsrc").play();
+                        document.querySelector(".playpause").innerHTML =
+                            '<i class="fas fa-pause"></i>';
+                    } else {
+                        document.querySelector("#musicsrc").pause();
+                        document.querySelector(".playpause").innerHTML =
+                            '<i class="fas fa-play"></i>';
+                    }
+                }
+            </script>
+
+                <script>
+  const messages = [
+   "Bạc quá cũng không tốt nhỉ?",
+      "Vỏ cá là cái gì cơ??",
+      "Năm, mười, mười lăm...",
+                    "Ặc...! vỏ này thúi rồi!",
+      "Hình như vỏ này có mắt hả?",
+      "Sao mình lại đi đào cái này vậy?"
+  ];
+
+   function displayRandomMessage() {
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    const messageElement = document.getElementById("message");
+    if (messageElement) { // Ensure the element exists
+      messageElement.innerText = messages[randomIndex];
+    }
+  }
+
+  setInterval(displayRandomMessage, 6000);
+</script>
  
-<div class="wave-container">  <h1 class="wave-text">
-        <span>P</span><span>U</span><span>R</span><span>E</span>
-        <span>V</span><span>A</span><span>N</span><span>I</span>
-        <span>L</span><span>L</span><span>A</span>
-    </h1> </div>
-  <span class="subtitle"> Cringe comp of</span>
-<img class="jumpPic" style="pointer-events: none; position: absolute; margin-left: 200px; width: 450px; height: auto; z-index: 100; top: 100px;" src="https://file.garden/ZivVUgQoJTlsDAWI/purevanillacringecomp/Illustration2.png"/>
-<div class="guestbookCont">
-<iframe scrolling="no" src="https://purevanillacringecomp.atabook.org" title="hehe" class="guestbookWebpage"></iframe>
-</div>
-
-</div>
-
-</body>
+        </div>
+    </body>
 </html>
