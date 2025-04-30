@@ -5,86 +5,16 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>VANILLA CRINGE COMP</title>
-        <style>
-        
-        
-       
-        .wave-text span {
-    display: inline-block;
-    font-size: 6vw;
-    animation: wave 2s ease-in-out infinite;
-    color: #845930;
-    font-family: sans-serif;
-}
-
-.wave-text span:nth-child(1) {
-    animation-delay: 0s;
-}
-.wave-text span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.wave-text span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-.wave-text span:nth-child(4) {
-    animation-delay: 0.6s;
-}
-
-.wave-text span:nth-child(5) {
-    animation-delay: 0.8s;
-}
-
-.wave-text span:nth-child(6) {
-    animation-delay: 1s;
-}
-
-.wave-text span:nth-child(7) {
-    animation-delay: 1.2s;
-}
-
-.wave-text span:nth-child(8) {
-    animation-delay: 1.4s;
-}
-
-.wave-text span:nth-child(9) {
-    animation-delay: 1.6s;
-}
-
-.wave-text span:nth-child(10) {
-    animation-delay: 1.8s;
-}
-
-.wave-text span:nth-child(11) {
-    animation-delay: 2s;
-}
-@keyframes wave {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
+<style>
 .running-loop-box {
  width: 400px;
   height: 30px;
-  margin: 3px;
+ 
   overflow: hidden;
   position: relative;
   white-space: nowrap;
   
   }
-
-  
-.running-loop-content {
-   position: absolute;
-    animation: left-to-right linear 10s infinite;
-  }
-  .actual-looped {
-    white-space: nowrap;
-    }
-
 @keyframes left-to-right {
   from {
         transform: translateX(0);
@@ -93,71 +23,108 @@
         transform: translateX(-50%);
     }
 }
-.jumpPic{
-animation: wave 2s ease-in-out infinite;
-}
-.wave-container {
-position: absolute; z-index: 200; top:70px;
-}
-        body {
-         display: flex;
-                flex-direction: column;
+  
+.running-loop-content {
+   position: absolute;
+    animation: left-to-right linear 10s infinite;
+  }
+  .actual-looped {
+    white-space: nowrap;
+    }
+ body {display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 20px;
+                gap: 5px;
                 width: auto;
                 height: 100dvh;
-                overflow: hidden;
+                overflow: scroll;
                 font-family: sans-serif;
                 color:#845930}
                 
-           .guestbookCont {
-           position: absolute;
+                 .guestbookCont {
+           position: relative;
            overflow: hidden;
-           width: 70%;
-           height: 600px;
-           margin-top: -200px;
-           margin-left: -15%;
+           width: 400px;
+           height: 300px;
+           background-color: red;
+        float: right;
            }
-           .guestbookWebpage {
+           
+            .guestbookWebpage {
            position: absolute;
            width: 400px;
-           height: 430px;
+           height: 450px;
            border: none;
            overflow-y: hidden; 
-           margin-top: -120px;}
+           margin-top: -150px;}
            
-           .subtitle {position: absolute;  margin-top: -290px; margin-left: -170px; color: #fff; -webkit-text-stroke: 1px #D4B56B;
-text-stroke: 1px #D4B56B; font-family: sans-serif;font-size: 40px; z-index: 200; width: 60%}
+           @media (orientation: landscape) {
+  .bodyContainer {
+    flex-direction: column;
+  }
+}
 
-.wave-container {position: absolute; margin-left: -200px;
-        margin-top: -2%; max-width: 70%; pointer-events: none;}
-        </style>
+.bodyContainer {
+width: max-content;
+display: flex;
+  flex-direction: row;
+   justify-content: center; 
+    align-items: center;
+  gap: 1px;
+  }
+  
+  .bodyContainer2 {
+width: max-content;
+display: flex;
+  flex-direction: column;
+   justify-content: center; 
+    align-items: center;
+  
+  }
+  
+  .wave-container {position: relative; 
+         pointer-events: none;}
+         
+         @keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+</style>
 </head>
 <body>
 
-<div id="fatass" style="display: flex; flex-direction: column;margin-top: 100px; margin-left: -100px;">
-<div style="position: absolute; margin-top: 100px; margin-left: -160px; width:100px; height: 50px; z-index: 100;"> <div class="running-loop-box">
+<div class="bodyContainer2">
+<h1> PURE VANILLA CRINGE COMP </h1>
+<div style="position: relative; left:250px; top: +20px; width:900px; height: 50px; z-index: 100;"> 
+
+<div class="running-loop-box">
   <div class="running-loop-content">
   <div class="actual-javascript:void(0);looped">
  Send button might be hidden after one message and im lazy... refresh to send more. 
   Send button might be hidden after one message and im lazy... refresh to send more. 
-  </div>
-  </div>
-
-</div></div>
+  </div> </div> </div>
+  
+ </div>
  
-<div class="wave-container">  <h1 class="wave-text">
-        <span>P</span><span>U</span><span>R</span><span>E</span>
-        <span>V</span><span>A</span><span>N</span><span>I</span>
-        <span>L</span><span>L</span><span>A</span>
-    </h1> </div>
-
-<img class="jumpPic" style="pointer-events: none; position: absolute; left: 50%;  width: 40%; height: auto; z-index: 500; top: 100px;" src="https://file.garden/ZivVUgQoJTlsDAWI/purevanillacringecomp/Illustration2.png"/>
+    <div class="bodyContainer">
+     
+  
+     <img class="jumpPic" style="pointer-events: none; position: relative; float: left; margin-right: -100px; width: 400px; height: auto; animation: wave 2s ease-in-out infinite; z-index: 500;" src="https://file.garden/ZivVUgQoJTlsDAWI/purevanillacringecomp/Illustration2.png"/>
+     
 <div class="guestbookCont">
-<iframe scrolling="no" src="https://purevanillacringecomp.atabook.org" title="hehe" class="guestbookWebpage"></iframe>
-</div>
+  <iframe scrolling="no" src="https://purevanillacringecomp.atabook.org" title="hehe" class="guestbookWebpage"></iframe>  </div>
+  
+  
+    
 
+  
+</div>
 </div>
 
 </body>
