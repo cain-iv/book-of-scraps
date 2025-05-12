@@ -1,131 +1,481 @@
+
 <!DOCTYPE html>
+
+
 <html>
+
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>VANILLA CRINGE COMP</title>
-<style>
-.running-loop-box {
- width: 400px;
-  height: 30px;
+
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+
+  <link rel="stylesheet" href="styles/style.css"/>
+
+  <title>Welcome</title>
+
+  <script>
+
+            window.location.replace("#1");
+
+        </script>
+
+  <style>
+
+  html {
+
+  scroll-behavior: smooth;
+
+  overflow-anchor: none;
+
+}
+
  
+
+@font-face {
+
+  font-family: amy;
+
+  src: url('https://file.garden/ZivVUgQoJTlsDAWI/FONTS/GothaniaSerif_PERSONAL_USE_ONLY.otf');
+
+}
+
+
+.running-loop-box {
+
+ width: 100%;
+
+  height: 30px;
+
+  margin: 3px;
+
   overflow: hidden;
+
   position: relative;
+
   white-space: nowrap;
-  
+
+ 
+
   }
+
+
+ 
+
+.running-loop-content {
+
+   position: absolute;
+
+    animation: left-to-right linear 10s infinite;
+
+  }
+
+  .actual-looped {
+
+    white-space: nowrap;
+
+    }
+
+
 @keyframes left-to-right {
+
   from {
+
         transform: translateX(0);
+
+    }
+
+    to {
+
+        transform: translateX(-50%);
+
+    }
+
+}
+
+
+  body {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 80dvh;
+
+    background-color: #E3CE97;
+
+    font-family: sans-serif;
+
+    overflow-x: hidden;
+
+    overflow-y:scroll;
+    
+    color: #8D6238;
+
+  }
+
+ 
+
+ hr.solid {
+
+  border-top: 0.2px solid #8D6238;
+
+  width: 100%;
+
+  margin-top: -1px;
+
+}
+
+ 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
     }
     to {
-        transform: translateX(-50%);
+        transform:rotate(360deg);
     }
 }
-  
-.running-loop-content {
-   position: absolute;
-    animation: left-to-right linear 10s infinite;
+
+@keyframes wave {
+  0% {
+    top: 0px;
   }
-  .actual-looped {
-    white-space: nowrap;
-    }
- body {display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
-                width: auto;
-                height: 100dvh;
-                overflow: scroll;
-                font-family: sans-serif;
-                color:#845930}
-                
-                 .guestbookCont {
-           position: relative;
-           overflow: hidden;
-           width: 400px;
-           height: 300px;
-           background-color: red;
-        float: right;
-           }
-           
-            .guestbookWebpage {
-           position: absolute;
-           width: 400px;
-           height: 450px;
-           border: none;
-           overflow-y: hidden; 
-           margin-top: -150px;}
-           
-           @media (orientation: landscape) {
-  .bodyContainer {
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.waveAni {
+ animation-name: wave;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  }
+
+  .allbox {
+
+  width: 80%;
+
+   border-width:7px;
+
+border-style:solid;
+
+border-image: url("https://i.imgur.com/NJa4bp2.png") 8 fill round;
+
+padding-left: 5px;
+
+padding-right: 5px;
+
+top:50px;
+
+position: absolute;
+
+display: flex;
+
     flex-direction: column;
-  }
-}
 
-.bodyContainer {
-width: max-content;
-display: flex;
-  flex-direction: row;
-   justify-content: center; 
     align-items: center;
-  gap: 1px;
+
+    justify-content: center;
+
   }
-  
-  .bodyContainer2 {
-width: max-content;
-display: flex;
-  flex-direction: column;
-   justify-content: center; 
+
+ 
+
+  .middlebox {
+
+    border: 1px #8D6238 solid;
+
+    background-color: white;
+
+    width: 100%;
+
+    height: max-content;
+
+    display: flex;
+
+    flex-direction: column;
+
     align-items: center;
-  
+
+    justify-content: center;
+
+    padding: 3px;
+
+   position: relative;
+
+     overflow-anchor: auto;
+
+   
+
+  }
+
+  .deadbox {
+
+    border: 1px #8D6238 solid;
+
+    background-color: #FEFEDA;
+
+    width: 100%;
+
+    height: max-content;
+
+    padding: 3px;
+
+    border-top: none;
+box-shadow: inset 0px 0px 30px 30px #fff;
+  }
+
+  .deadbox:target {
+
+    display: block;}
+
+  .deadbox:not(:target) {
+
+    display: none;}
+
+ 
+
+  .smallscroll {
+
+    width: 170px;
+
+    height: 70px;
+
+    overflow-y: scroll;
+
+    overflow-x: hidden;
+
+    border: 1px #8D6238 solid;
+    padding: 3px;
+
+    position: relative;
+
+    background-color: white;
+
+ z-index: 2000;
+
   }
   
-  .wave-container {position: relative; 
-         pointer-events: none;}
-         
-         @keyframes wave {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
+  
 
+ .spinthis {
+  width: 100px;
+  height: 100px;
+  animation-name: spin;
+  animation-duration: 13000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
 
-</style>
+  .guestbookCont {
+
+           position: relative;
+
+           overflow: hidden;
+
+          border: 1px solid #8D6238;
+
+           height: 300px;
+
+          width: 100%;
+
+           }
+
+           .guestbookWebpage {
+
+           border: 1px solid #8D6238;
+           position: absolute;
+           margin-left: 0px;
+           margin-top: -150px;
+      
+           width: 500px;
+
+           height: 450px;
+
+           border: none;
+
+           overflow-y: hidden;
+
+           }
+
+  </style>
+
 </head>
+
 <body>
 
-<div class="bodyContainer2">
-<h1> PURE VANILLA CRINGE COMP </h1>
-<div style="position: relative; left:250px; top: +20px; width:900px; height: 50px; z-index: 100;"> 
+<div class="allbox">
 
-<div class="running-loop-box">
-  <div class="running-loop-content">
-  <div class="actual-javascript:void(0);looped">
- Send button might be hidden after one message and im lazy... refresh to send more. 
-  Send button might be hidden after one message and im lazy... refresh to send more. 
-  </div> </div> </div>
-  
- </div>
+  <div class="middlebox">
+
  
-    <div class="bodyContainer">
-     
-  
-     <img class="jumpPic" style="pointer-events: none; position: relative; float: left; margin-right: -100px; width: 400px; height: auto; animation: wave 2s ease-in-out infinite; z-index: 500;" src="https://file.garden/ZivVUgQoJTlsDAWI/purevanillacringecomp/Illustration2.png"/>
-     
-<div class="guestbookCont">
-  <iframe scrolling="no" src="https://purevanillacringecomp.atabook.org" title="hehe" class="guestbookWebpage"></iframe>  </div>
-  
-  
-    
 
+   <div class="running-loop-box">
+
+  <div class="running-loop-content">
+
+  <div class="actual-looped">
+
+Pure Vanilla Cookie is freaky...! A lot freakier than we thought! His twitter is @freaknilla!!!
+Pure Vanilla Cookie is freaky...! A lot freakier than we thought! His twitter is @freaknilla!!!
+  </div>
+
+  </div></div>
+
+    <hr class="solid">
+
+    <div style="width:100%;">
+
+      <div style="width:40%; height: 250px; float: left; align-items: center; background-image: url('https://file.garden/ZivVUgQoJTlsDAWI/image_2025-05-12_143711262.png');
+       background-repeat: no-repeat; background-size: cover; background-position: right; box-shadow: inset 0px 0px 30px 30px #fff;">
+
+       
+.
+ 
+
+      </div>
+
+     
+
+      <div style="width:55%; float: right; position: relative; z-index: 10;  box-shadow: 0px 0px 30px white">
+
+         <span class="stroke-double" style="font-family: amy; font-size: 40px;"> PUREVANILLA CRINGE COMP </span> <br/>
+
+        <span>
+
+        Welcome to the website!
+
+        I'm @sh4d0w_v4n1ll4 on Twitter/X! <br/> I'm 21, I go by
+
+        <b><i>he/him</i></b>
+
+         and I make art sometimes. <br/>
+
+        Where do you want to go? </span> <br/><br/>
+
+        <select onchange = "window.location.href=this.value">
+
+          <option value="#1">home</option>
+
+          <option value="#2">about me</option>
+
+          <option value="#3">anon message</option>
+
+
+        </select>
+
+      </div>
+
+    </div>
+
+  </div>
+
+ 
+
+  <div class="deadbox" style="position: relative; overflow: hidden; box-shadow: inset 0px 0px 30px 30px #fff;" id="2">
+<img class="waveAni" style="width: 350px; position: absolute;  z-index: 100; pointer-event: none; margin-left: -30px; margin-top: 10px;" src="https://file.garden/ZivVUgQoJTlsDAWI/Illustration2.png"/>
+  <div style="transform:translateX(52%); ">
+
+   <span style="position: relative; font-family: amy; font-size: 30px;"> WHAT I POST </span><br/>
+
+    <div class="smallscroll" style="">
+
+   
+
+       This account contains <b> <i> NSFW content</i></b>(as both posts and reposts). While I can't flag others, I tag my nsfw art with nsfw hashtags. Everything I post is blurred anyway so people can look at the account warnings before following!
+
+    </div>
+
+  </div>
+
+ 
+
+  <div style="transform:translateX(63%); ">
+
+   <span style="position: relative; font-family: amy; font-size: 30px;"> INTERACTION </span><br/>
+
+    <div class="smallscroll" style="">
+
+    - let's be nice and funny together :]! <br/>
+
+    - Please don't follow me if you're a minor <br/>
+
+    - No pressure with following me back! Same with unfollowing or blocking me. Let us all have a nice day on the internet <br/>
+
+    </div>
+
+  </div>
+
+ 
+
+  <div style="transform:translateX(57%); ">
+
+   <span style="position: relative; font-family: amy; font-size: 30px;"> SHIPPING </span><br/>
+
+    <div class="smallscroll" style="">
+
+    Everyone x Pure Vanilla, SMilk x Truthless Recluse, APV (top) x Smilk (bottom). I also like PureLily, PureCacao, and ElderLily in particular. I'm indifferent about every other ship.
+
+       
+
+    </div>
+
+  </div>
   
+  <img class="spinthis" style=" margin-top: -400px; margin-left: -200px; position: absolute; width: 400px; height: auto; z-index: 0; opacity: 0.3; pointer-event: none;" src="https://file.garden/ZivVUgQoJTlsDAWI/lace.png"/>
+
+   </div>
+
+  <div class="deadbox" id="3">
+
+   <div class="running-loop-box">
+
+  <div class="running-loop-content">
+
+  <div class="actual-looped">
+
+ Send button might be hidden after one message and im lazy... refresh to send more.
+
+  Send button might be hidden after one message and im lazy... refresh to send more.
+
+  </div>
+
+  </div></div>
+
+    <div class="guestbookCont">
+
+<iframe scrolling="no" src="https://purevanillacringecomp.atabook.org" title="hehe" class="guestbookWebpage"></iframe>
+
 </div>
-</div>
+
+  </div>
+
+ 
+
+  <div class="deadbox" id="4">
+
+    link hoard
+
+   
+
+  </div>
+
+ 
+
+  </div>
 
 </body>
+
 </html>
+
+
+
